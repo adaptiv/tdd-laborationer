@@ -1,0 +1,6 @@
+Given the collection contains Jaws, Alien and Star Wars
+When I list all movies
+Then the result should look like:
+Jaws
+Alien
+Star Wars

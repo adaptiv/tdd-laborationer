@@ -1,0 +1,30 @@
+LABORATIONSINSTRUKTION
+
+LAB 7: Arbeta utifrån-och-in
+
+Översiktsbeskrivning
+Genom att utgå från den givna koden samt det ännu ej uppfyllda scenariet small_movie_collection_displys_list
+ska du implementera stödet för listning av en filmsamling som inte är tom.
+
+Uppgiften i detalj
+1. Läs igenom hela laborationsinstruktionen. Fråga kursledare om ni har frågor.
+2. Öppna projektet med namn "pmlib-outsidein-start" i Eclipse. Gå igenom koden.
+3. Du har fått två scenarier "empty_list" och "small_movie_collection_displys_list" 
+   varav "empty_list" har färdigställts. Båda scenarierna återfinns i se.tddcourse.pmlib.scenarios.
+4. Börja med att skriva en scenarioklass för sceanriet "single_movie_listing".
+5. Komplettera sedan MovieCollectionSteps (alternativt skriv en ny om ni föredrar det) med de steg som behövs
+   för att implementera "small_movie_collection_displys_list".
+6. Driv utformningen av implementationen med Mockito. Om ni försöker er på en lösning som är svårt att 
+   skriva mocktester för, fundera på vilka alternativ till den designen ni har. 
+7. Reflektera över lösningen. Gjorde du några insikter?
+
+När är ni klara?
+När ni har fungerande, bra designade, beteendeverifierande tester för applikationen som helhet.
+Fundera också över effekten av att arbeta strikt utifrån och in istället från inifrån och ut 
+eller från mitten och åt båda håll.
+
+Tips
+* Mockning blir svårare när tillstånd exponeras.
+* Det s.k. "visitor"-mönstret kan hjälpa dig att undvika att exponera onödigt tillstånd. 
+* Om ni fastnar, öppna projektet "pmlib-outsidein-end" och titta på vårt lösningsförslag.
+  Notera att det finns många olika sätt att lösa problemet på.

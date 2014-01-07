@@ -1,0 +1,37 @@
+LABORATIONSINSTRUKTION
+
+LAB 6: Beteendeexempel med JBehave
+
+Översiktsbeskrivning
+I scenariot small_movie_collection_displays_list ska du beskriva listningsbeteendet för en liten filmsamling.
+
+Uppgiften i detalj
+1. Läs igenom hela laborationsinstruktionen. Fråga kursledare om ni har frågor.
+2. Längre ner i filen finner ni en "user story" och ett scenario som beskriver hur en användare ska kunna 
+   interagera med en liten filmsamling. Översätt den till ett JBehave-scenario som ni placerar i 
+   paketet se.tddcourse.pmlib.scenarios.
+3. Testa att köra alla tester i projektet (högerklicka på projektet och välj "Run as" -> "JUnit test").
+   Notera vad som händer.
+4. Komplettera sedan projeket genom att skriva en scenarioklass för scenariet.
+5. Återigen, testa att köra alla tester i projektet. Notera vad som händer.
+6. Reflektera över lösningen. Hur hjälper detta oss i vårt arbete?
+
+När är ni klara?
+När ni har ett scenario som exekverar grönt och noterar att alla "steg" i scenariet är (PENDING).
+
+Tips
+* Minns att namnet på scenarioklassen beror på filnamnet på scenariet.
+* En scenarioklass definieras genom arv.
+
+User Story
+Som filmsamlare
+vill jag kunna lista alla filmer i mitt bibliotek
+för att få en överblick av mitt filminnehav.
+
+Scenario
+Givet att samlingen innehåller Jaws, Alien och Star Wars
+När jag väljer att lista alla filmer
+Så ser listan ut så här:
+Jaws
+Alien
+Star Wars

@@ -1,0 +1,61 @@
+1. Läs och analysera klasserna. Läs och kör testerna. Identifiera odörer. Prioritera dem efter vikt.
+
+2. Första steg: Attackera duplicering i getMovies(), getMoviesByTitle(). Extrahera: renderMovieTable().
+   Tog bara en implementation. Gå tillbaka med inline.
+   Introducera lokal variabel: 'sorted' för listan av filmer (samma namn).
+   Extrahera renderMovieTable() igen (tar båda)
+   Gör inline av variabel sorted. Byt namn på parameter till 'moviesToRender'.
+
+   Läsbarhet. Extrahera: renderHeading().
+   Samma abstraktionsnivå. Extrahera ny metod av for-loopen: renderMovies().
+
+   Gå ned till getMoviesByTitle. Extrahera metod: sortByTitle() som sorterar filmlista.
+   Snygga till. Gör inline på onödiga variabler.
+   Läsbarhet: Byt metodordning renderHeading/renderMovies.
+
+   Ändra signatur på renderHeading/renderMovies för att undvika att utparametrar skickas in.
+   Läsbarhet: Flytta upp metoderna getMoviesByTitle() och sortByTitle(). Lägg add() överst.
+
+3. Fixa namngivning i Movie-klassen
+   Byt namn på minutes till lengthInMinutes, ändra getter.
+   Byt namn på rating till mpaaRating, ändra getter.
+   Se till att namn på parametrar och fält är baserade på samma grundterm.
+
+4. Fixa duplicering i testklassen.
+   Bryt ut createLibrary() som setupmetod.
+
+5. Ny analys. Reflektion: MovieLibrary.renderMovies() rotar i privata fält för att rendrera en film.
+   Borde ligga i Movie...
+
+6. Flytta över renderMovie till klassen Movie.
+   Extrahera en metod: renderMovie() ur for-loopen i renderMovies().
+   Ny klass: MovieTest. Testa render genom att skapa en film och försöka rendrera den.
+   Se till att testet fallerar korrekt (med bra meddelande).
+   Implementera rendermetod gm att kopiera kod från MovieLibrary.renderMovie(). Förlita dig på kompilatorn.
+   Kör testet igen och verifiera att det fungerar.
+   Gör inline av variabler som är fält i Movie. Tag bort onödiga getters.
+
+   Förenkla renderMovies. Börja med att delegera till Movie.render().
+   Tag sedan bort MovieLibrary.renderMovie().
+   Läsbarhet: Byt namn på metoder. Metoden getMovies() borde vara render() etc.
+
+7. Var står vi med testerna?
+   Kör testtäckning: Nästan 100 %...
+   MovieLibrary.size() används inte. Tag bort (död kod). 100 %!
+
+Om ni hinner...
+
+8. Skapa robustare kod.
+   Skapa test i MovieLibraryTest som försöker lägga till film med värde null. Ska kasta exception.
+   Implementera en guard i MovieLibrary.add().
+
+9. Hitta bättre abstraktioner.
+   Fälten director, rating och length borde vara egna typer, t.ex. PersonName, MpaaRating (enum) and MinutePeriod.
+   Testdriv fram sådana, byt ut typerna i Movie och se till att alla tester går igenom.
+
+10. Återstående förbättringar?
+   Rendrering av MovieLibrary låter som presentation. Vi kan extrahera ett presentationslager.
+     Extrahera rendreringen ur MovieLibrary till en MovieLibraryController som skriver ut på en given vy.
+     Låt adderande av film, hämta ut listan och sortering vara kvar i MovieLibrary.
+   Finns ingen naturlig sorteringsordning. Mer flexibel sortering bör införas.
+     Bryt ut filmkomparatorn till egen klass. Skicka in den för att sortera på olika sätt.

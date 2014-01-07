@@ -1,0 +1,24 @@
+POTENTIELLA ODÖRER
+
+Klass: MovieLibrary
+-------------------
+Namngivning: Metoden getMovies returnerar en lista av strängar, inte filmer.
+Ansvar: Metoderna getMovies och getMoviesByTitle rotar i privata fält i Movie-klassen.
+Långa metoder: Metoderna getMovies och getMoviesByTitle skapar hela listan och bygger upp representation av varje film
+Duplicering: Metoderna getMovies, getMoviesByTitle är nästan identiska.
+Ömtålighet: Man kan lägga till null-film och få null pointer vid listning.
+
+Klass: Movie
+------------
+Primitive Obsession: Director är ett namn eller person, inte en string.
+Primitive Obsession: Rating är en värdetyp, inte en string.
+Namngivning: Attributen minutes och rating är otydliga.
+Testbarhet: Saknar tester.
+
+Spec: MovieLibraryTest
+----------------------
+Duplicering: Setup för båda testerna
+
+Övergripande
+------------
+Ansvar: Ska domänmetoder veta hur de ska skrivas ut?
