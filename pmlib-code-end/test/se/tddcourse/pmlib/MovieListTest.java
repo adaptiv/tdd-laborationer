@@ -4,6 +4,9 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Unit specification of a {@link MovieList}.
  */
@@ -14,26 +17,26 @@ public class MovieListTest {
     private static final Movie MOVIE_DELIVERANCE = new Movie("Deliverance");
     
     @Test
-    public void emptyListShouldContainNoMovies() {
+    public void emptyListHasSizeZero() {
         MovieList emptyMovieList = new MovieList();
         assertEquals(0, emptyMovieList.numberOfMovies());
     }
 
     @Test
-    public void canAddMovieToList() {
-        MovieList emptyMovieList = new MovieList();
-        Movie jaws = new Movie("Jaws");
-        emptyMovieList.add(jaws);
-        assertEquals(1, emptyMovieList.numberOfMovies());
+    public void oneMovieListHasSizeOfOne() {
+        MovieList oneMovieList = new MovieList(new Movie("Jaws"));
+        assertEquals(1, oneMovieList.numberOfMovies());
     }
     
     @Test
-    public void shouldIndicateNumberOfMovies() {
-        MovieList movieList = new MovieList();
-        movieList.add(MOVIE_DELIVERANCE);
-        movieList.add(MOVIE_JAWS);
-        movieList.add(MOVIE_THE_SHINING);
-        assertEquals(3, movieList.numberOfMovies());   
+    public void smallMovieListIndicatesNumberOfMovies() {
+        List<Movie> movies = new ArrayList<Movie>();
+        movies.add(MOVIE_DELIVERANCE);
+        movies.add(MOVIE_JAWS);
+        movies.add(MOVIE_THE_SHINING);
+        MovieList movieList = new MovieList(movies);
+
+        assertEquals(3, movieList.numberOfMovies());
     }
 
 }
