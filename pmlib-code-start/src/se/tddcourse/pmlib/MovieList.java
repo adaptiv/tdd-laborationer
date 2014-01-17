@@ -5,14 +5,17 @@ import java.util.List;
 
 public class MovieList {
 
-	private List<Movie> movies = new ArrayList<Movie>();
+	private List<String> movies = new ArrayList<String>();
 
-	public int size() {
+    public MovieList() {
+    }
+
+    public MovieList(String title) {
+        movies.add(title);
+    }
+
+    public int size() {
 		return movies.size();
-	}
-
-	public void add(Movie movie) {
-		movies.add(movie);
 	}
 
 }

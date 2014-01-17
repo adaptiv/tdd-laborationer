@@ -15,8 +15,7 @@ public class MovieListTest {
 	
 	@Test
 	public void addingAMovieShouldIncreaseSizeByOne() throws Exception {
-		MovieList movieList = new MovieList(); //DRY
-		movieList.add(new Movie());
+		MovieList movieList = new MovieList("Alien");
 		assertEquals(1, movieList.size());
 	}
 	
