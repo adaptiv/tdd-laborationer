@@ -26,13 +26,12 @@ Uppgiften i detalj
 När är ni klara?
 När ni har fungerande, bra designade tester som svarar mot behovet och reflekterat över lösningen.
 
+Tips IntelliJ
+* För att köra alla tester tillsammans (en s.k. testsvit) i en modul ange: [Shift-F10]
+
 Tips Eclipse
 * För att köra flera tester tillsammans (en s.k. testsvit), markera ett paket eller hela projektet
   och välj: Menyval Run-Run As...-JUnit Test [Shift-Alt-X, sen T]
-
-Tips IntelliJ
-* För att köra flera tester tillsammans (en s.k. testsvit), markera ett paket eller hela projektet
-  och ange: [Ctrl-Shift-F10]
 
 Tips övrigt
 * Något användargränssnitt eller lagring av data är inte nödvändigt ännu.
