@@ -1,10 +1,12 @@
 1. Läs och analysera klasserna. Läs och kör testerna. Identifiera odörer. Prioritera dem efter vikt.
 
-2. Första steg: Attackera duplicering i getMovies(), getMoviesByTitle(). Extrahera: renderMovieTable().
+2. Första steg: Attackera duplicering i getMovies(), getMoviesByTitle().
+   Extrahera: renderMovieTable() från getMovies().
    Tog bara en implementation. Gå tillbaka med inline.
    Introducera lokal variabel: 'sorted' för listan av filmer (samma namn).
    Extrahera renderMovieTable() igen (tar båda)
-   Gör inline av variabel sorted. Byt namn på parameter till 'moviesToRender'.
+   Gör inline av variabel sorted.
+   Byt namn på parametern till den extraherade metoden till 'moviesToRender'.
 
    Läsbarhet. Extrahera: renderHeading().
    Samma abstraktionsnivå. Extrahera ny metod av for-loopen: renderMovies().
@@ -22,7 +24,7 @@
    Se till att namn på parametrar och fält är baserade på samma grundterm.
 
 4. Fixa duplicering i testklassen.
-   Bryt ut createLibrary() som setupmetod.
+   Bryt ut createLibrary() som @Before (setup).
 
 5. Ny analys. Reflektion: MovieLibrary.renderMovies() rotar i privata fält för att rendrera en film.
    Borde ligga i Movie...
@@ -33,10 +35,11 @@
    Se till att testet fallerar korrekt (med bra meddelande).
    Implementera rendermetod gm att kopiera kod från MovieLibrary.renderMovie(). Förlita dig på kompilatorn.
    Kör testet igen och verifiera att det fungerar.
-   Gör inline av variabler som är fält i Movie. Tag bort onödiga getters.
+   Gör inline av variabler som är fält i Movie.
 
    Förenkla renderMovies. Börja med att delegera till Movie.render().
    Tag sedan bort MovieLibrary.renderMovie().
+   Gör getters i Movie privata, då de endast används internt, alternativt ta bort dem.
    Läsbarhet: Byt namn på metoder. Metoden getMovies() borde vara render() etc.
 
 7. Var står vi med testerna?
