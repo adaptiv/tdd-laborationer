@@ -52,10 +52,8 @@ public class ConsoleController {
     }
 
     private void printMovieList() {
-        final Iterator<Movie> movieIterator = movieList.iterator();
-        while (movieIterator.hasNext()) {
-            Movie movie = movieIterator.next();
-            console.printLine(movie.getTitle());            
+        for (Movie movie : movieList) {
+            console.printLine(movie.getTitle());
         }
     }
 
