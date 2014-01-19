@@ -17,7 +17,7 @@ public class ConsoleController {
      * @param movies a container for movies
      */
     public ConsoleController(Console consoleToUse, MovieList movies) {
-        // TODO
+        // TODO Setup dependencies
     }
 
     /**
@@ -26,7 +26,7 @@ public class ConsoleController {
      * @param command a string representing the command to execute
      */
     void execute(String command) {
-        // TODO
+        // TODO Handle list action
     }
 
 }

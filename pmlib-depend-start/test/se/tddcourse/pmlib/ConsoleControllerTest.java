@@ -3,6 +3,7 @@ package se.tddcourse.pmlib;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.junit.Before;
@@ -22,7 +23,7 @@ public class ConsoleControllerTest {
 
     @Before
     public void setupControllerWithMovieListAndConsole() {
-        // TODO
+        // TODO Setup fixture
     }
 
     @Test
@@ -42,13 +43,15 @@ public class ConsoleControllerTest {
      * Stub of console given canned answers. Can be queried for output.
      */
     private class ConsoleRecorder implements Console {
-        
+
+        List<String> lines = new ArrayList<String>();
+
         public void printLine(String content) {
-            // TODO
+            // TODO Save output
         }
 
         private List<String> getRecordedOutput() {
-            // TODO
+            // TODO Return output
             return null;
         }        
     }
