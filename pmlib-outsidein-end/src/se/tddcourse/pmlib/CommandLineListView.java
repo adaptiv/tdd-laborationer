@@ -6,8 +6,8 @@ import java.util.List;
 public class CommandLineListView implements MovieListView {
 
 	private static final String NEW_LINE = "\n";
-	public static final String EMPTY_LIST_FOOTER = "Your collection is empty.";
-	public static final String SUMMARY_FOOTER = "Number of movies in the collection %d.";
+	public static final String EMPTY_LIST_FOOTER = "Ditt filmbibliotek är tomt.";
+	public static final String SUMMARY_FOOTER = "Antal filmer i samlingen %d.";
 	private List<String> lines = new ArrayList<String>();
 
 	public CommandLineListView() {
