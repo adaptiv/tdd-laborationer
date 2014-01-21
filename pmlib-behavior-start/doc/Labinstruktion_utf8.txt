@@ -27,7 +27,7 @@ När är ni klara?
 När ni har fungerande, bra designade tester som svarar mot behovet och reflekterat över lösningen.
 
 Tips IntelliJ
-* För att köra alla tester tillsammans (en s.k. testsvit) i en modul ange: [Shift-F10]
+* För att köra alla tester tillsammans (en s.k. testsvit) i en modul, ställ dig i roten och tryck: [Ctrl+Shift-F10]
 
 Tips Eclipse
 * För att köra flera tester tillsammans (en s.k. testsvit), markera ett paket eller hela projektet
