@@ -9,7 +9,7 @@
 	<classpathentry kind="lib" path="lib/cucumber-junit-1.1.5.jar"/>
 	<classpathentry kind="lib" path="lib/cucumber-jvm-deps-1.0.3.jar"/>
 	<classpathentry kind="lib" path="lib/gherkin-2.12.1.jar"/>
-	<classpathentry kind="lib" path="lib/hamcrest-core-1.3.jar"/>
+	<classpathentry kind="lib" path="lib/hamcrest-all-1.3.jar"/>
 	<classpathentry kind="lib" path="lib/junit-4.11.jar"/>
 	<classpathentry kind="lib" path="lib/mockito-all-1.9.5.jar"/>
 	<classpathentry kind="output" path="bin"/>
