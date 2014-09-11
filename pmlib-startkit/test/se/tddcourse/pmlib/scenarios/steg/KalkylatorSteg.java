@@ -9,6 +9,7 @@ import cucumber.api.java.sv.Så;
 
 public class KalkylatorSteg {
 	
+	@SuppressWarnings("unused")
 	private Kalkylator kalkylator;
 
 	@Before
