@@ -1,7 +1,5 @@
 package se.tddcourse.pmlib;
 
-import java.util.Iterator;
-
 /**
  * Application controller for the text-based version of the application.
  */
