@@ -1,6 +1,6 @@
 LABORATIONSINSTRUKTION
 
-LAB 6: Beteendeexempel med JBehave
+LAB 6: Beteendeexempel med Cucumber
 
 Översiktsbeskrivning
 I scenariot lista_ett_litet_filmbibliotek ska du beskriva listningsbeteendet för en liten filmsamling.
