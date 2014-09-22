@@ -1,4 +1,4 @@
-package se.tddcourse.pmlib.scenarios;
+package se.pmlib.scenarios;
 
 import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;
